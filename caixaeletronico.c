@@ -4,18 +4,23 @@ void oi(){
     printf("oieeee");
 }
 
+int pegavalor(){
+    int a;
+    printf("Digite o valor do saque (entre 10 e 600 reais): ");
+    scanf("%d", &a);
+    
+    if (valor < 10 || valor > 600) {
+        printf("Valor inv�lido. O valor m�nimo � 10 reais e o m�ximo � 600 reais.\n");
+        return -1;
+    }
+    return a;
+}
+
 int main() {
     int valor, notas_100, notas_50, notas_10, notas_5, notas_1;
     oi();
     printf("\nmudando alguma coisa\n");
-    printf("Digite o valor do saque (entre 10 e 600 reais): ");
-    scanf("%d", &valor);
-    
-    if (valor < 10 || valor > 600) {
-        printf("Valor inv�lido. O valor m�nimo � 10 reais e o m�ximo � 600 reais.\n");
-        return 0;
-    }
-    
+    valor = pegavalor();
     notas_100 = valor / 100;
     valor = valor % 100;
     
