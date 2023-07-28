@@ -1,7 +1,12 @@
 #include <stdio.h>
 
+void oi(){
+    printf("oieeee");
+}
+
 int main() {
     int valor, notas_100, notas_50, notas_10, notas_5, notas_1;
+    oi();
     printf("\nmudando alguma coisa\n");
     printf("Digite o valor do saque (entre 10 e 600 reais): ");
     scanf("%d", &valor);
