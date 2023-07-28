@@ -37,7 +37,8 @@ void coisas(int valor){
     printf("Notas de 50 reais: %d\n", notas_50);
     printf("Notas de 10 reais: %d\n", notas_10);
     printf("Notas de 5 reais: %d\n", notas_5);
-    printf("Notas de 1 real: %d\n", notas_1);
+    //nao vai mais imprimir um real  printf("Notas de 1 real: %d\n", notas_1);
+    printf("mudando mais alguma coisas");
 }
 
 int main() {
