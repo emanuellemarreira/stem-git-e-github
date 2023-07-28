@@ -1,15 +1,20 @@
 #include <stdio.h>
 
-int main() {
-    int valor, notas_100, notas_50, notas_10, notas_5, notas_1;
-    
+int pegarvalor(){
+    int valor;
     printf("Digite o valor do saque (entre 10 e 600 reais): ");
     scanf("%d", &valor);
     
     if (valor < 10 || valor > 600) {
-        printf("Valor inválido. O valor mínimo é 10 reais e o máximo é 600 reais.\n");
-        return 0;
+        printf("Valor invï¿½lido. O valor mï¿½nimo ï¿½ 10 reais e o mï¿½ximo ï¿½ 600 reais.\n");
+        scanf("%d", &valor);
     }
+    return valor;
+}
+
+int main() {
+    int valor, notas_100, notas_50, notas_10, notas_5, notas_1;
+   valor = pegarvalor();
     
     notas_100 = valor / 100;
     valor = valor % 100;
