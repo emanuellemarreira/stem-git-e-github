@@ -9,18 +9,15 @@ int pegavalor(){
     printf("Digite o valor do saque (entre 10 e 600 reais): ");
     scanf("%d", &a);
     
-    if (valor < 10 || valor > 600) {
+    if (a < 10 || a > 600) {
         printf("Valor inv�lido. O valor m�nimo � 10 reais e o m�ximo � 600 reais.\n");
         return -1;
     }
     return a;
 }
 
-int main() {
-    int valor, notas_100, notas_50, notas_10, notas_5, notas_1;
-    oi();
-    printf("\nmudando alguma coisa\n");
-    valor = pegavalor();
+void coisas(int valor){
+    int notas_100, notas_50, notas_10, notas_5, notas_1;
     notas_100 = valor / 100;
     valor = valor % 100;
     
@@ -41,6 +38,14 @@ int main() {
     printf("Notas de 10 reais: %d\n", notas_10);
     printf("Notas de 5 reais: %d\n", notas_5);
     printf("Notas de 1 real: %d\n", notas_1);
+}
+
+int main() {
+    int valor;
+    oi();
+    printf("\nmudando alguma coisa\n");
+    valor = pegavalor();
+    coisas(valor);
     
     return 0;
 }
